@@ -1,0 +1,39 @@
+@import url(normalize.css);
+
+/* Project Essentials */
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    width: 100%;
+    display: inline-block;
+}
+
+*, *::after,*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-black-background: #000000;
+    --color-grey-font:#cac9c9;
+
+    --fs-regular:1.8rem;
+    --fw-lighter:300;
+    --fw-light:400;
+    --fw-bold:600;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--fw-light);
+    font-size: var(--fs-regular);
+    color: var(--color-grey-font);
+}
