@@ -9,7 +9,6 @@ function App() {
     <React.Fragment>
       <Navbar />
       <Routes>
-        <Route path="/about" element={<About />} />
         <Route path="/" element={<Website />} />
       </Routes>
     </React.Fragment>
