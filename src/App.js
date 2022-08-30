@@ -8,7 +8,7 @@ import Error from "./components/error";
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
       <Routes>
         <Route path="*" element={<Error />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="/" element={<Website />} />
       </Routes>
-    </div>
+    </React.Fragment>
   );
 }
 

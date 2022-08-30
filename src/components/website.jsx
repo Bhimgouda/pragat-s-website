@@ -1,29 +1,44 @@
 import React, { Fragment } from "react";
 import typeWriterImg from "../images/typewriter-removebg.webp";
-import postImg1 from "../images/1_VRjh5mVH8z54OoYOBkU1OQ.avif";
-import postImg2 from "../images/5wpKgV75aONqkTJlafw2yQmK9yd2-np93oka.avif";
-import postImg3 from "../images/2jqChkrv03exBUgkLrDzIbfM99q2-zt92c0e.avif";
+import postImg2 from "../images/web3.webp";
+import postImg3 from "../images/photo-1651055705032-d4187855b004.webp";
+import postImg1 from "../images/683bd878731ab0e229b4f0f62e25ad58-removebg-preview.webp";
 
 const Website = () => {
   return (
     <React.Fragment>
       <section className="hero-component">
         <h1>
-          <span className="hero__title text-gradient word1">Develop.</span>
-          <span className="hero__title text-gradient word2">preview.</span>
-          <span className="hero__title word3">Ship.</span>
+          <span className="title--filled hero__title">Develop.</span>
+          <span className="title--filled hero__title">preview.</span>
+          <span className="title--filled hero__title">Ship.</span>
         </h1>
       </section>
-      <section>
+
+      <section className="orange-section"></section>
+
+      <section className="section--road-board grid--desktop grid--mobile">
+        <div>
+          <span className="title--filled stroke-text">
+            What do I write about
+          </span>
+          <span className="title--filled stroke-text">
+            What do I write about
+          </span>
+          <span className="title--filled stroke-text">
+            What do I write about
+          </span>
+          <span className="title--filled">What do I write about</span>
+        </div>
         <div class="road-board">
           <div class="board board1">
-            <span class="board-text">SUCCESS</span>
+            <span class="board-text">Web3</span>
           </div>
           <div class="board board2">
-            <span class="board-text">SUCCESS</span>
+            <span class="board-text">Blockchain</span>
           </div>
           <div class="board board3">
-            <span class="board-text">SUCCESS</span>
+            <span class="board-text">DeFi</span>
           </div>
         </div>
       </section>
