@@ -619,50 +619,54 @@ background-clip: text;
 
 
 @media screen and (max-width:800px) {
-    @keyframes animate{
-        0%{
-            transform: rotateX(-15deg)  rotateY(-75deg);
-    
-        }
-        5%{
-    
-            transform: rotateX(-15deg) rotateY(15deg);
-        }
-            
-        25%{
-            transform: rotateX(-15deg)  rotateY(15deg);
-            
-        }
-        25%{
-            transform: rotateX(-15deg) rotateY(105deg);
-            
-        }
-        50%{
-            transform: rotateX(-15deg) rotateY(105deg);
-            
-        }
-        
-        50%{
-            transform: rotateX(-15deg) rotateY(195deg);
-            
-        }
-        75%{
-            transform: rotateX(-15deg) rotateY(195deg);
-            
-        }
-        
-        75%{
-            transform: rotateX(-15deg) rotateY(285deg);
-    
-        }
-    
-    
-        100%{
-            transform: rotateX(-15deg) rotateY(285deg);
-        }
+    .cube{
+        animation: animate-mobile 4s linear infinite;
     }
 
 
+}
+
+@keyframes animate-mobile{
+    0%{
+        transform: rotateX(-15deg)  rotateY(-75deg);
+
+    }
+    0%{
+
+        transform: rotateX(-15deg) rotateY(15deg);
+    }
+        
+    25%{
+        transform: rotateX(-15deg)  rotateY(15deg);
+        
+    }
+    25%{
+        transform: rotateX(-15deg) rotateY(105deg);
+        
+    }
+    50%{
+        transform: rotateX(-15deg) rotateY(105deg);
+        
+    }
+    
+    50%{
+        transform: rotateX(-15deg) rotateY(195deg);
+        
+    }
+    75%{
+        transform: rotateX(-15deg) rotateY(195deg);
+        
+    }
+    
+    75%{
+        transform: rotateX(-15deg) rotateY(285deg);
+
+    }
+
+
+    100%{
+        transform: rotateX(-15deg) rotateY(285deg);
+    }
 }
 
 .cube div{
