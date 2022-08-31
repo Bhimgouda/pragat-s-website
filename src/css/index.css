@@ -700,7 +700,7 @@ background-clip: text;
 .section--about{
     background: var(--color-orange);
     height: 21vw;
-    min-height: 200px;
+    min-height: 180px;
     color: #000000;
     position: relative;
     display: flex;
@@ -780,7 +780,7 @@ background-clip: text;
     }
 
     .author-img{
-        width: 50vw;
+        width: 60vw;
         right: 0;
     }
     .img2{
