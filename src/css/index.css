@@ -105,6 +105,7 @@ body{
     font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
+    text-align: center;
 }
 
 @media screen and (max-width:800px) {
@@ -155,7 +156,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 15rem;
     backdrop-filter: blur(10px);
     z-index: 101;
@@ -275,17 +276,11 @@ background-clip: text;
 
 .section--road-board{
     overflow: hidden;
-    padding: 0 20px 100px;
+    padding: 50px 20px 100px;
     column-gap: 10%;
     justify-items: center;
     align-items: center;
 }
-
-
-
-
-
-
 
 .road-board{
     perspective: 70em;
@@ -508,7 +503,6 @@ background-clip: text;
     opacity: 0.7;
     box-shadow: 0 0 4em 10px var(--color-violet);;
     border-radius: 1.5em;
-    animation: img-shadow 2s infinite alternate;
 }
 
 
@@ -554,10 +548,6 @@ background-clip: text;
 
 /* Orange section */
 
-.orange-section{
-    background: var(--color-orange);
-    height: 40vh;
-}
 
 
 
@@ -566,7 +556,7 @@ background-clip: text;
 
 .section--featured h2{
     font-size: 27vw;
-    letter-spacing: -2.5vw;
+    letter-spacing: -2.2vw;
     word-spacing: 2vw;
     padding-top: 4vw;
     margin-bottom: 50px;
@@ -701,6 +691,119 @@ background-clip: text;
         transform:translateZ(-240px);
     }
 }
+
+
+/* About section */
+
+
+
+.section--about{
+    background: var(--color-orange);
+    height: 21vw;
+    min-height: 200px;
+    color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 400px;
+}
+
+.section--about::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-line.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 55%;
+    transform: translateX(10%);
+}
+
+@media screen and (max-width:800px) {
+    .section--about::before{
+        background-size: 80%;
+    }
+}
+
+.section--about h2{
+    font-weight: 600;
+    letter-spacing: -0.5vw;
+    font-size: 7vw;
+    padding-left: 5vw;
+}
+
+
+
+.author-img{
+    position: absolute;
+    bottom: 0;
+    width: 35vw;
+    right: 0;
+    z-index: 10;
+}
+
+
+.img2{
+    z-index: 8;
+    right: 1vw;
+    opacity: 0.4;
+    bottom: -0.5vw;
+}
+.img3{
+    z-index: 6;
+    right: 2vw;
+    opacity: 0.3;
+    bottom: -1vw;
+}
+.img4{
+    z-index: 4;
+    right: 3vw;
+    opacity: 0.2;
+    bottom: -1.5vw;
+}
+
+@media screen and (max-width:800px) {
+    .section--about{
+        margin-top: 300px;
+    }
+
+    
+
+    .section--about::before{
+        display: none;
+    }
+
+    .author-img{
+        width: 50vw;
+        right: 0;
+    }
+    .img2{
+        z-index: 8;
+        right: 2vw;
+        opacity: 0.4;
+        bottom: -0.5vw;
+    }
+    .img3{
+        z-index: 6;
+        right: 4vw;
+        opacity: 0.3;
+        bottom: -1vw;
+    }
+    .img4{
+        z-index: 4;
+        right: 6vw;
+        opacity: 0.2;
+        bottom: -1.5vw;
+    }
+}
+
+
 
 
 

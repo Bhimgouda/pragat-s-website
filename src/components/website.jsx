@@ -7,6 +7,7 @@ import hackernoon from "../images/HackerNoon-Logo.webp";
 import rateCity from "../images/rateCity.svg";
 import web3University from "../images/web3-university.webp";
 import coinTelegraph from "../images/coino.webp";
+import pragatImg from "../images/pragat.avif";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -42,7 +43,29 @@ const Website = () => {
             </span>
           </h1>
         </section>
-        <section className="orange-section"></section>
+        <section className="section--about">
+          <h2>Who am I ?</h2>
+          <img
+            className="author-img"
+            src={pragatImg}
+            alt="Pragat Vyawahare - Blockchain copywriter"
+          />
+          <img
+            className="author-img img2"
+            src={pragatImg}
+            alt="Pragat Vyawahare - Blockchain copywriter"
+          />
+          <img
+            className="author-img img3"
+            src={pragatImg}
+            alt="Pragat Vyawahare - Blockchain copywriter"
+          />
+          <img
+            className="author-img img4"
+            src={pragatImg}
+            alt="Pragat Vyawahare - Blockchain copywriter"
+          />
+        </section>
 
         <section className="section--road-board grid grid--cols-2">
           <div>
@@ -90,6 +113,7 @@ const Website = () => {
           </div>
         </section>
         <section className="section--posts">
+          <h2 className="title--filled">Latest Articles</h2>
           <div className="card-container">
             <article className="card">
               <span className="card__title">
