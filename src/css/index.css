@@ -41,14 +41,14 @@ section{
     --color-orange-neon:#ff7011;
     --color-violet:#003366;
     --color-violet-light:#0091ff;
-
+    
     --fs-regular:1.8rem;
     --fs-nav-links:1.6rem;
     --fw-lighter:300;
     --fw-light:400;
     --fw-bold:700;
-
-
+    
+    
     --font-inter:'Inter', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
     --font-mohave:'Mohave', sans-serif;
@@ -78,7 +78,7 @@ body{
 
 .grid{
     display: grid;
-
+    
 }
 
 @media screen and (min-width:800px) {
@@ -125,6 +125,69 @@ body{
     }
 }
 
+/* Btn reflection props */
+
+.btn{
+    font-size: 4rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid var(--color-violet-light);
+    padding: 0.25em 1.25em;
+    margin: 10px;
+    font-family: var(--font-inter);
+    font-weight: 600;
+}
+
+.btn--reflection{
+    color: var(--color-violet-light);
+    text-shadow: 0 0 0.5em var(--color-violet-light);
+    box-shadow: inset 0 0 0.5em 0 var(--color-violet-light)
+    ,0 0 0.5em 0 var(--color-violet-light);
+    position: relative;
+    transition: background-color 100ms linear;
+    background-color: #000000;
+}
+
+.btn--reflection::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--color-violet-light);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1,0.35);
+    filter: blur(1.2em);
+    opacity: 0.7;
+}
+
+.btn--reflection::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 4em 0.5em var(--color-violet-light);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.btn--reflection:hover{
+    background-color: var(--color-violet-light);
+    text-shadow: 0;
+    color: #000000;
+}
+
+.btn--reflection:hover::before{
+    opacity: 1;
+}
+
+.btn--reflection:hover::after{
+    opacity: 1;
+}
 
 /* Loader Component */
 
@@ -554,6 +617,19 @@ background-clip: text;
 
 /* Featured Section */
 
+.section--featured .featured-companies--mobile{
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    .featured-companies--desktop{
+        display: none;
+    }
+    .section--featured .featured-companies--mobile{
+        display: flex;
+    }
+}
+
 .section--featured h2{
     font-size: 27vw;
     letter-spacing: -2.2vw;
@@ -705,6 +781,76 @@ background-clip: text;
 }
 
 
+/* For mobile section */
+
+.slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    width: 100vw;
+    padding: 100px 0 200px ;
+}
+
+.slider{
+    display: flex;
+    animation: board-slider 6s infinite;
+}
+
+@keyframes board-slider {
+ 0%{
+    transform: translateX(900px);
+ }
+ 25%{
+    transform: translateX(450px);
+ }
+ 50%{
+    transform: translateX(-0);
+ }
+ 75%{
+    transform: translateX(-450px);
+ }
+ 100%{
+    transform: translateX(-900px);
+ }
+    
+}
+
+.board-3d img{
+    margin: 0 100px;
+    min-width: 250px;
+}
+
+.board-3d{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 5em 10px var(--color-violet);
+    background: linear-gradient(180deg,#151515,rgba(0, 51, 102,0.7));
+}
+
+.board-3d::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--color-violet);
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(7em) rotateX(40deg) scale(1,0.35);
+    filter: blur(5em);
+    opacity: 0.7;
+}
+
+
 /* About section */
 
 
@@ -814,6 +960,144 @@ background-clip: text;
         bottom: -1.5vw;
     }
 }
+
+
+
+
+/* Form section */
+
+.section--form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section--form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    font-family: var(--font-poppins);
+    width: 80vw;
+    padding: 1rem;
+    margin: 5px;
+    background-color: #000000;
+    color: var(--color-grey-font);
+    border: 2px solid var(--color-violet);
+    resize: none;
+}
+
+form .alert{
+    font-family: var(--font-poppins);
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    color: red;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    transition: "color 9999s ease-out, background-color 9999s ease-out";
+    transition-delay: 9999s;
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--color-grey-font) !important;
+}
+
+.input:focus{
+    outline: none;
+}
+
+
+/* Forms section--- Typewriter */
+
+.typewriter-image-container{
+    position: relative;
+    width: 700px;
+}
+
+
+.typewriter-image-container::before{
+    content: "SAY Hi";
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-orange);
+    font-size: 6rem;
+    position: absolute;
+    top: -55px;
+    left: 200px;
+    width: 35%;
+    height: 150px;
+    transform-origin: bottom;
+    background-color: var(--color-grey-font);
+    transform: skewY(-15.5deg) rotateY(-5deg) rotateX(-40deg);
+    box-shadow: -2px -10px 1em 5px var(--color-violet-light);
+}
+
+@media screen and (max-width:800px) {
+    .typewriter-image-container{
+        width: 370px;
+    }
+    .typewriter-image-container::before{
+        content: "SAY Hi";
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        color: var(--color-orange);
+        font-size: 5rem;
+        position: absolute;
+        top: -70px;
+        left: 110px;
+        width: 35%;
+        height: 120px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .section--form{
+        flex-direction: row;
+    }
+    .input{
+        width: 40vw;
+    }
+}
+
+
+
+/* Footer */
+
+.footer__credits{
+    margin: 0;
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    opacity: 0.8;
+    background-color: var(--color-orange);
+}
+
+@media screen and (min-width:800px) {
+    .footer__credits{
+        font-size: 1.5rem;
+    }
+}
+
 
 
 

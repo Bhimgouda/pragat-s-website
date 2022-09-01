@@ -5,6 +5,7 @@ import { Route, Routes, Redirect, Navigate } from "react-router-dom";
 import About from "./components/about/about";
 import Services from "./components/services/services";
 import Error from "./components/error";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="/" element={<Website />} />
       </Routes>
+      <Footer />
     </React.Fragment>
   );
 }

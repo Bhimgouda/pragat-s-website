@@ -11,8 +11,7 @@ class Form extends Component {
   schema = {
     name: Joi.string().required().min(4).label("Your Name"),
     email: Joi.string().email().required().label("Email"),
-    subject: Joi.string().label("Subject"),
-    message: Joi.string().label("Message").min(20),
+    message: Joi.string().label("Message"),
   };
 
   handleSubmit = async (e) => {
@@ -54,20 +53,20 @@ class Form extends Component {
     this.setState({ data, errors: errors || {} });
   };
 
-  renderInput = (name, label, type = "text") => {
+  renderInput = (name, label, type = "text", autocomplete = "on") => {
     const { errors, data } = this.state;
     return (
       <div>
         <input
+          className="input"
           name={name}
           onChange={this.handleChange}
           type={type}
           value={data[name]}
           placeholder={label}
+          autoComplete={autocomplete}
         />
-        {errors[name] && (
-          <div className="alert alert-danger">{errors[name]}</div>
-        )}
+        {errors[name] && <div className="alert">{errors[name]}</div>}
       </div>
     );
   };
@@ -77,6 +76,7 @@ class Form extends Component {
     return (
       <div>
         <textarea
+          className="input textarea"
           placeholder={label}
           value={data[name]}
           onChange={this.handleChange}
@@ -84,9 +84,7 @@ class Form extends Component {
           cols="30"
           rows="10"
         />
-        {errors[name] && (
-          <div className="alert alert-danger">{errors[name]}</div>
-        )}
+        {errors[name] && <div className="alert">{errors[name]}</div>}
       </div>
     );
   };
@@ -96,9 +94,10 @@ class Form extends Component {
       <form>
         {this.renderInput("name", "Your Name", "text")}
         {this.renderInput("email", "Email", "email")}
-        {this.renderInput("subject", "Subject", "text")}
         {this.renderTextArea("message", "Your Message")}
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button className=" btn btn--reflection" onClick={this.handleSubmit}>
+          Submit
+        </button>
       </form>
     );
   }

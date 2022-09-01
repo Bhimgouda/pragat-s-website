@@ -8,6 +8,7 @@ import rateCity from "../images/rateCity.svg";
 import web3University from "../images/web3-university.webp";
 import coinTelegraph from "../images/coino.webp";
 import pragatImg from "../images/pragat.avif";
+import Form from "./common/form";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -94,7 +95,7 @@ const Website = () => {
         </section>
         <section className="section--featured">
           <h2 className="title--filled stroke-text">As seen on</h2>
-          <div className="featured-companies cube">
+          <div className="featured-companies--desktop cube">
             <div className="top"></div>
             <div>
               <span className="featured-companies__logo" style={{ "--i": "0" }}>
@@ -109,6 +110,17 @@ const Website = () => {
               <span className="featured-companies__logo" style={{ "--i": "3" }}>
                 <img src={coinTelegraph} alt="" />
               </span>
+            </div>
+          </div>
+          <div className="slider-container featured-companies--mobile">
+            <div className="board-3d">
+              <div className="slider">
+                <img src={hackernoon} alt="" />
+                <img src={rateCity} alt="" />
+                <img src={web3University} alt="" />
+                <img src={coinTelegraph} alt="" />
+                <img src={hackernoon} alt="" />
+              </div>
             </div>
           </div>
         </section>
@@ -135,6 +147,12 @@ const Website = () => {
               <span className="card__cta">READ NOW {"->"}</span>
             </article>
           </div>
+        </section>
+        <section className="section--form">
+          <div className="typewriter-image-container">
+            <img src={typeWriterImg} alt="" />
+          </div>
+          <Form />
         </section>
       </main>
     </React.Fragment>
