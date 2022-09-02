@@ -31,19 +31,6 @@ const Website = () => {
     <React.Fragment>
       {loaderComponent}
       <main className={loaded || "hide"}>
-        <section className="hero-component">
-          <h1>
-            <span className="title--filled hero__title">
-              Content is not the King
-            </span>
-            <span className="title--filled hero__title hero__title--mid">
-              Its the kingdom
-            </span>
-            <span className="title--filled hero__title">
-              Let me build yours.
-            </span>
-          </h1>
-        </section>
         <section className="section--about">
           <h2>Who am I ?</h2>
           <img
@@ -51,35 +38,18 @@ const Website = () => {
             src={pragatImg}
             alt="Pragat Vyawahare - Blockchain copywriter"
           />
-          <img
-            className="author-img img2"
-            src={pragatImg}
-            alt="Pragat Vyawahare - Blockchain copywriter"
-          />
-          <img
-            className="author-img img3"
-            src={pragatImg}
-            alt="Pragat Vyawahare - Blockchain copywriter"
-          />
-          <img
-            className="author-img img4"
-            src={pragatImg}
-            alt="Pragat Vyawahare - Blockchain copywriter"
-          />
+          <div className="img-frame frame1"></div>
+          <div className="img-frame frame2"></div>
+          <div className="img-frame frame3"></div>
+          <div className="img-frame frame4"></div>
         </section>
 
         <section className="section--road-board grid grid--cols-2">
           <div>
-            <span className="title--filled stroke-text">
-              What do I write about
-            </span>
-            <span className="title--filled stroke-text">
-              What do I write about
-            </span>
-            <span className="title--filled stroke-text">
-              What do I write about
-            </span>
-            <span className="title--filled">What do I write about</span>
+            <span className="title stroke-text">What do I write about</span>
+            <span className="title stroke-text">What do I write about</span>
+            <span className="title stroke-text">What do I write about</span>
+            <span className="title">What do I write about</span>
           </div>
           <div className="road-board">
             <div className="board board1">
@@ -94,7 +64,7 @@ const Website = () => {
           </div>
         </section>
         <section className="section--featured">
-          <h2 className="title--filled stroke-text">As seen on</h2>
+          <h2 className="title stroke-text">As seen on</h2>
           <div className="featured-companies--desktop cube">
             <div className="top"></div>
             <div>
@@ -125,7 +95,7 @@ const Website = () => {
           </div>
         </section>
         <section className="section--posts">
-          <h2 className="title--filled">Latest Articles</h2>
+          <h2 className="title">Featured Articles</h2>
           <div className="card-container">
             <article className="card">
               <span className="card__title">
