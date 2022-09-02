@@ -9,6 +9,7 @@ import web3University from "../images/web3-university.webp";
 import coinTelegraph from "../images/coino.webp";
 import pragatImg from "../images/pragat.avif";
 import Form from "./common/form";
+import postImg4 from "../images/nft 3d 2.webp";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -94,37 +95,42 @@ const Website = () => {
             </div>
           </div>
         </section>
-        <section className="section--posts grid grid--cols-2">
+        <section className="section--posts grid">
           <div className="posts__title">
             <span className="title">Featured Articles</span>
-            <span className="title stroke-text">Featured Articles</span>
             <span className="title stroke-text">Featured Articles</span>
             <span className="title stroke-text">Featured Articles</span>
           </div>
           <h2 className="title stroke-text posts__title--mobile">
             Featured Articles
           </h2>
-          <div className="card-container">
-            <article className="card">
-              <span className="card__title">
-                A Guide That Will Help You Find the Right NFTs
-              </span>
-              <img src={postImg1} alt="" />
-              <span className="card__cta">READ NOW {"->"}</span>
-            </article>
-            <article className="card">
-              <span className="card__title">Why is Web3 Failing?</span>
-              <img src={postImg2} alt="" />
-              <span className="card__cta">READ NOW {"->"}</span>
-            </article>
-            <article className="card">
-              <span className="card__title">
-                Stable Coin: Everything You Need to Know
-              </span>
-              <img src={postImg3} alt="" />
-              <span className="card__cta">READ NOW {"->"}</span>
-            </article>
-          </div>
+
+          <article className="card card1">
+            <span className="card__title">
+              A Guide That Will Help You Find the Right NFTs
+            </span>
+            <img src={postImg1} alt="" />
+            <span className="card__cta">READ NOW {"->"}</span>
+          </article>
+          <article className="card card2">
+            <span className="card__title">Why is Web3 Failing?</span>
+            <img src={postImg2} alt="" />
+            <span className="card__cta">READ NOW {"->"}</span>
+          </article>
+          <article className="card card3">
+            <span className="card__title">
+              5 Issues With NFTs To Be Wary Of?
+            </span>
+            <img src={postImg4} alt="" />
+            <span className="card__cta">READ NOW {"->"}</span>
+          </article>
+          <article className="card card4">
+            <span className="card__title">
+              Stable Coin: Everything You Need to Know
+            </span>
+            <img src={postImg3} alt="" />
+            <span className="card__cta">READ NOW {"->"}</span>
+          </article>
         </section>
         <section className="section--form">
           <div className="typewriter-image-container">
