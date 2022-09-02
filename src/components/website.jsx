@@ -94,8 +94,16 @@ const Website = () => {
             </div>
           </div>
         </section>
-        <section className="section--posts">
-          <h2 className="title">Featured Articles</h2>
+        <section className="section--posts grid grid--cols-2">
+          <div className="posts__title">
+            <span className="title">Featured Articles</span>
+            <span className="title stroke-text">Featured Articles</span>
+            <span className="title stroke-text">Featured Articles</span>
+            <span className="title stroke-text">Featured Articles</span>
+          </div>
+          <h2 className="title stroke-text posts__title--mobile">
+            Featured Articles
+          </h2>
           <div className="card-container">
             <article className="card">
               <span className="card__title">
