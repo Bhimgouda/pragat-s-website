@@ -13,17 +13,19 @@ import Form from "./common/form";
 import postImg4 from "../images/nft 3d 2.webp";
 import "aos/dist/aos.css";
 import Hero from "./main/hero";
+import Aos from "aos";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
 
+  setTimeout(() => {
+    AOS.refresh();
+  }, 500);
+  AOS.init();
+
   const showContent = () => {
     setLoading(true);
   };
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   const loaderComponent =
     loaded === false ? (

@@ -20,7 +20,7 @@ class Form extends Component {
     this.setState({ data: { name: "", message: "", subject: "", email: "" } });
     axios.defaults.headers.post["Content-Type"] = "application/json";
     const response = await axios.post(
-      "https://formsubmit.co/ajax/84affe77499d6763511d57e36e72d965",
+      "https://formsubmit.co/ajax/e4a94ab3178af24c92f756f892be3382",
       {
         name: name,
         email: email,
