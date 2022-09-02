@@ -623,6 +623,7 @@ background-clip: text;
 
     .posts__title--mobile{
         display: block;
+        font-size: 6rem;
     }
     
     .posts__title{
@@ -940,24 +941,27 @@ background-clip: text;
 
 .img-frame{
     position: absolute;
-    right: 100px;
-    bottom: -10px;
-    border: 10px solid rgba(0, 51, 102,0.5);
+    transform: rotate(-15deg);
     width: 30vw;
     height: 45vw;
+}
+
+.frame1{
+    right: 10px;
+    bottom: -15px;
     z-index: 11;
-    transform: rotate(-15deg);
+    border: 10px solid rgba(0, 51, 102,0.5);
 }
 
 .frame2{
-    right: 120px;
+    right: 20px;
     bottom: -40px;
     z-index: 5;
     border: none;
     background: linear-gradient(180deg,#893700,#000);
 }
 .frame3{
-    right: 130px;
+    right: 30px;
     bottom: -60px;
     opacity: 0.5;
     z-index: 4;
@@ -966,13 +970,12 @@ background-clip: text;
     
 }
 .frame4{
-    right: 140px;
+    right: 40px;
     bottom: -80px;
     opacity: 0.3;
     z-index: 4;
     background: linear-gradient(180deg,#893700,#FF6700);
     border: none;
-
 }
 
 
@@ -981,17 +984,20 @@ background-clip: text;
     position: absolute;
     bottom: -1px;
     width: 30vw;
-    right: 100px;
+    right: 0px;
     z-index: 10;
 }
 
 @media screen and (max-width:800px) {
     .section--about{
-        margin-top: 300px;
+        margin-top: 300px
     }
 
     .section--about h2{
-        max-width: 30%;
+        max-width: 50%;
+        font-size: 2.5rem;
+        letter-spacing: normal;
+        align-self: flex-end;
     }
 
     .author-img{
@@ -1001,22 +1007,26 @@ background-clip: text;
     }
 
     .img-frame{
-        right: 50px;
-        bottom: 0px;
         width: 50vw;
         height: 75vw;
     }
+    
+    .frame1{
+        right: 50px;
+        bottom: -5px;
+        border: 5px solid rgba(0, 51, 102,0.5);
+    }
 
     .frame2{
-        right: 60px;
+        right: 55px;
         bottom: -20px;
     }
     .frame3{
-        right: 65px;
+        right: 60px;
         bottom: -30px;
     }
     .frame4{
-        right: 70px;
+        right: 65px;
         bottom: -40px;
     }
 
