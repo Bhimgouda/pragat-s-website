@@ -12,6 +12,7 @@ import pragatImg from "../images/pragat.avif";
 import Form from "./common/form";
 import postImg4 from "../images/nft 3d 2.webp";
 import "aos/dist/aos.css";
+import Hero from "./main/hero";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -38,9 +39,11 @@ const Website = () => {
     <React.Fragment>
       {loaderComponent}
       <main className={loaded || "hide"}>
+        <Hero />
         <section className="section--about">
           <h2>Who am I ?</h2>
           <img
+            data-aos="fade-up-left"
             className="author-img"
             src={pragatImg}
             alt="Pragat Vyawahare - Blockchain copywriter"
@@ -50,7 +53,6 @@ const Website = () => {
           <div className="img-frame frame3"></div>
           <div className="img-frame frame4"></div>
         </section>
-
         <section className="section--road-board grid grid--cols-2">
           <div>
             <span className="title stroke-text">What do I write about</span>
@@ -71,7 +73,7 @@ const Website = () => {
           </div>
         </section>
         <section className="section--featured">
-          <h2 data-aos="fade-right" className="title stroke-text">
+          <h2 data-aos="zoom-in" className="title stroke-text">
             As seen on
           </h2>
           <div className="featured-companies--desktop cube">
@@ -104,7 +106,7 @@ const Website = () => {
           </div>
         </section>
         <section className="section--posts grid">
-          <div className="posts__title">
+          <div data-aos="fade-left" className="posts__title">
             <span className="title">Featured Articles</span>
             <span className="title stroke-text">Featured Articles</span>
             <span className="title stroke-text">Featured Articles</span>
@@ -114,6 +116,8 @@ const Website = () => {
           </h2>
 
           <a
+            data-aos="fade-right"
+            data-aos-delay="200"
             target="_blank"
             href="https://hackernoon.com/a-guide-that-will-help-you-find-the-right-nfts"
           >
@@ -125,7 +129,11 @@ const Website = () => {
               <span className="card__cta">READ NOW {"->"}</span>
             </article>
           </a>
-          <a target="_blank" href="https://hackernoon.com/why-is-web3-failing">
+          <a
+            data-aos="fade-up"
+            target="_blank"
+            href="https://hackernoon.com/why-is-web3-failing"
+          >
             <article className="card card2">
               <span className="card__title">Why is Web3 Failing?</span>
               <img src={postImg2} alt="" />
@@ -133,6 +141,7 @@ const Website = () => {
             </article>
           </a>
           <a
+            data-aos="fade-up"
             target="_blank"
             href="https://hackernoon.com/5-issues-with-nfts-to-be-wary-of"
           >
@@ -145,6 +154,7 @@ const Website = () => {
             </article>
           </a>
           <a
+            data-aos="fade-up"
             target="_blank"
             href="https://hackernoon.com/stable-coin-everything-you-need-to-know"
           >
