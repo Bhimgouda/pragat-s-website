@@ -619,11 +619,12 @@ background-clip: text;
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
     }
 
     .posts__title--mobile{
         display: block;
-        font-size: 6rem;
+        font-size: 5.5rem;
         overflow: hidden;
     }
     
@@ -1093,9 +1094,6 @@ input:-webkit-autofill{
     outline: none;
 }
 
-* {
-    outline: 1px solid #f00 !important;
-}
 
 
 /* Forms section--- Typewriter */
