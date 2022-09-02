@@ -504,7 +504,6 @@ background-clip: text;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    column-gap: 5%;
     padding: 20px;
     grid-column: 1/2;
 }
@@ -628,10 +627,6 @@ background-clip: text;
     
     .posts__title{
         display: none;
-    }
-
-    .card-container{
-        
     }
     .card img{
         transform: scale(1.2);
@@ -1001,8 +996,23 @@ background-clip: text;
     }
 
     .img-frame{
+        right: 5px;
+        bottom: -10px;
         width: 50vw;
         height: 75vw;
+    }
+
+    .frame2{
+        right: 10px;
+        bottom: -20px;
+    }
+    .frame3{
+        right: 15px;
+        bottom: -30px;
+    }
+    .frame4{
+        right: 20px;
+        bottom: -40px;
     }
 
     .section--about::before{
