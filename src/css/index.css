@@ -477,6 +477,7 @@ background-clip: text;
     font-family: var(--font-poppins);
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
+
     align-items: center;
     justify-items: center;
 }
@@ -542,6 +543,7 @@ background-clip: text;
     position: absolute;
     top: 0;
     left: 0;
+    color: var(--color-grey-font);
     font-size: larger;
     padding: 2rem 0 0 3rem;
     max-width: 70%;
@@ -636,9 +638,11 @@ background-clip: text;
     }
 
     .card__title{
+        word-wrap: break-word;
         max-width: 100%;
         z-index: 10;
-        font-size: 2rem;
+        width: 90%;
+        font-size: 1.8rem;
         transform: scale(1.15);
      }
 
@@ -1005,7 +1009,7 @@ background-clip: text;
     .author-img{
         width: 50vw;
         bottom: 0px;
-        right: 50px;
+        right: 40px;
     }
 
     .img-frame{
@@ -1030,10 +1034,6 @@ background-clip: text;
     .frame4{
         right: 55px;
         bottom: -40px;
-    }
-
-    .section--about::before{
-        display: none;
     }
 }
 

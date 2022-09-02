@@ -105,32 +105,49 @@ const Website = () => {
             Featured Articles
           </h2>
 
-          <article className="card card1">
-            <span className="card__title">
-              A Guide That Will Help You Find the Right NFTs
-            </span>
-            <img src={postImg1} alt="" />
-            <span className="card__cta">READ NOW {"->"}</span>
-          </article>
-          <article className="card card2">
-            <span className="card__title">Why is Web3 Failing?</span>
-            <img src={postImg2} alt="" />
-            <span className="card__cta">READ NOW {"->"}</span>
-          </article>
-          <article className="card card3">
-            <span className="card__title">
-              5 Issues With NFTs To Be Wary Of?
-            </span>
-            <img src={postImg4} alt="" />
-            <span className="card__cta">READ NOW {"->"}</span>
-          </article>
-          <article className="card card4">
-            <span className="card__title">
-              Stable Coin: Everything You Need to Know
-            </span>
-            <img src={postImg3} alt="" />
-            <span className="card__cta">READ NOW {"->"}</span>
-          </article>
+          <a
+            target="_blank"
+            href="https://hackernoon.com/a-guide-that-will-help-you-find-the-right-nfts"
+          >
+            <article className="card card1">
+              <span className="card__title">
+                A Guide That Will Help You Find the Right NFTs
+              </span>
+              <img src={postImg1} alt="" />
+              <span className="card__cta">READ NOW {"->"}</span>
+            </article>
+          </a>
+          <a target="_blank" href="https://hackernoon.com/why-is-web3-failing">
+            <article className="card card2">
+              <span className="card__title">Why is Web3 Failing?</span>
+              <img src={postImg2} alt="" />
+              <span className="card__cta">READ NOW {"->"}</span>
+            </article>
+          </a>
+          <a
+            target="_blank"
+            href="https://hackernoon.com/5-issues-with-nfts-to-be-wary-of"
+          >
+            <article className="card card3">
+              <span className="card__title">
+                5 Issues With NFTs To Be Wary Of?
+              </span>
+              <img src={postImg4} alt="" />
+              <span className="card__cta">READ NOW {"->"}</span>
+            </article>
+          </a>
+          <a
+            target="_blank"
+            href="https://hackernoon.com/stable-coin-everything-you-need-to-know"
+          >
+            <article className="card card4">
+              <span className="card__title">
+                Stable Coin: Everything You Need to Know
+              </span>
+              <img src={postImg3} alt="" />
+              <span className="card__cta">READ NOW {"->"}</span>
+            </article>
+          </a>
         </section>
         <section className="section--form">
           <div className="typewriter-image-container">
