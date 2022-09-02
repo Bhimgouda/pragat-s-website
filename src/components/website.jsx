@@ -1,4 +1,5 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
+import AOS from "aos";
 import typeWriterImg from "../images/typewriter-removebg.webp";
 import postImg2 from "../images/web3.webp";
 import postImg3 from "../images/photo-1651055705032-d4187855b004.webp";
@@ -10,6 +11,7 @@ import coinTelegraph from "../images/coino.webp";
 import pragatImg from "../images/pragat.avif";
 import Form from "./common/form";
 import postImg4 from "../images/nft 3d 2.webp";
+import "aos/dist/aos.css";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -17,6 +19,10 @@ const Website = () => {
   const showContent = () => {
     setLoading(true);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const loaderComponent =
     loaded === false ? (
@@ -52,7 +58,7 @@ const Website = () => {
             <span className="title stroke-text">What do I write about</span>
             <span className="title">What do I write about</span>
           </div>
-          <div className="road-board">
+          <div data-aos="fade-left" className="road-board">
             <div className="board board1">
               <span className="board-text">Web3</span>
             </div>
@@ -65,7 +71,9 @@ const Website = () => {
           </div>
         </section>
         <section className="section--featured">
-          <h2 className="title stroke-text">As seen on</h2>
+          <h2 data-aos="fade-right" className="title stroke-text">
+            As seen on
+          </h2>
           <div className="featured-companies--desktop cube">
             <div className="top"></div>
             <div>
