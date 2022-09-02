@@ -1037,7 +1037,7 @@ background-clip: text;
     }
 
     .section--about::before{
-        position: relative;
+        position: absolute;
         right: 50px;
     }
 }
