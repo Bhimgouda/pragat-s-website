@@ -624,6 +624,7 @@ background-clip: text;
     .posts__title--mobile{
         display: block;
         font-size: 6rem;
+        overflow: hidden;
     }
     
     .posts__title{
@@ -1012,21 +1013,21 @@ background-clip: text;
     }
     
     .frame1{
-        right: 50px;
+        right: 40px;
         bottom: -5px;
         border: 5px solid rgba(0, 51, 102,0.5);
     }
 
     .frame2{
-        right: 55px;
+        right: 45px;
         bottom: -20px;
     }
     .frame3{
-        right: 60px;
+        right: 50px;
         bottom: -30px;
     }
     .frame4{
-        right: 65px;
+        right: 55px;
         bottom: -40px;
     }
 
