@@ -2,7 +2,7 @@ import React, { useState, Fragment, useEffect } from "react";
 import AOS from "aos";
 import Form from "./common/form";
 import Hero from "./main/hero";
-import typeWriterImg from "../images/typewriter-removebg.webp";
+import typeWriterImg from "../images/typewriterImg.webp";
 import postImg1 from "../images/683bd878731ab0e229b4f0f62e25ad58-removebg-preview.webp";
 import postImg2 from "../images/web3.webp";
 import postImg3 from "../images/nft 3d 2.webp";
@@ -12,6 +12,7 @@ import rateCity from "../images/rateCity.svg";
 import web3University from "../images/web3-university.webp";
 import coinTelegraph from "../images/coino.webp";
 import pragatImg from "../images/pragat.avif";
+import pragatImgFallback from "../images/pragat.webp";
 import "aos/dist/aos.css";
 
 const Website = () => {
@@ -31,19 +32,18 @@ const Website = () => {
       imgSrc: postImg1,
     },
     {
-      title: "A Guide That Will Help You Find the Right NFTs",
-      link: "https://hackernoon.com/a-guide-that-will-help-you-find-the-right-nfts",
+      title: "Why is Web3 Failing?",
+      link: "https://hackernoon.com/why-is-web3-failing",
       imgSrc: postImg2,
     },
     {
-      title: "A Guide That Will Help You Find the Right NFTs",
-      link: "https://hackernoon.com/a-guide-that-will-help-you-find-the-right-nfts",
+      title: "5 Issues With NFTs To Be Wary Of",
+      link: "https://hackernoon.com/5-issues-with-nfts-to-be-wary-of",
       imgSrc: postImg3,
     },
     {
-      postTitle: "A Guide That Will Help You Find the Right NFTs",
-      postLink:
-        "https://hackernoon.com/a-guide-that-will-help-you-find-the-right-nfts",
+      title: "Stable Coin: Everything You Need to Know",
+      link: "https://hackernoon.com/stable-coin-everything-you-need-to-know",
       imgSrc: postImg4,
     },
   ];
@@ -77,13 +77,17 @@ const Website = () => {
 
         <section className="section--about">
           <h2>Who am I ?</h2>
-          <img
-            data-aos="fade-up-left"
-            data-aos-delay="200"
+          <picture
             className="author-img"
-            src={pragatImg}
-            alt="Pragat Vyawahare - Blockchain copywriter"
-          />
+            data-aos-delay="200"
+            data-aos="fade-up-left"
+          >
+            <source type="image/avif" srcSet={pragatImg} />
+            <img
+              src={pragatImgFallback}
+              alt="Pragat Vyawahare - Blockchain copywriter"
+            />
+          </picture>
           {[0, 1, 2, 3].map((n, index) => (
             <span key={index} className={`img-frame frame${n + 1}`}></span>
           ))}
@@ -161,7 +165,7 @@ const Website = () => {
           </div>
           {featuredPosts.map((post, index) => (
             <a key={index} target="_blank" href={post.link}>
-              <article className="card card1">
+              <article className={`card card${index + 1}`}>
                 <span className="card__title">{post.title}</span>
                 <img src={post.imgSrc} alt={post.title} />
                 <span className="card__cta">READ NOW {"->"}</span>
