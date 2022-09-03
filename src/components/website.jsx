@@ -60,17 +60,19 @@ const Website = () => {
   const loaderComponent =
     loaded === false ? (
       <section className="loader-component">
-        Hey Loading
-        <span className="load__btn" onClick={showContent}>
-          Load it
+        <span className="title">
+          <span>Why</span>
+          <span>Not</span>
+        </span>
+        <span className="load__btn btn btn--reflection" onClick={showContent}>
+          See it
         </span>
       </section>
     ) : null;
 
   return (
     <React.Fragment>
-      {loaderComponent}
-      <main className={loaded || "hide"}>
+      <main>
         <Hero />
 
         <section className="section--about">
