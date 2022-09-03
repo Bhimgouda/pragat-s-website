@@ -16,12 +16,12 @@ img{
 }
 
 section{
-    margin: 100px 0;                   /* To maintain a required gap between every section */
+    margin: 50px 0;                   /* To maintain a required gap between every section */
 }
 
 @media screen and (min-width:800px){
     section{
-        margin: 200px 0;                   /* To maintain a required gap between every section */
+        margin: 150px 0;                   /* To maintain a required gap between every section */
     }
     
 }
@@ -29,9 +29,6 @@ section{
 .hide{
     display: none;
 }
-
-
-
 
 :root{
     --color-black-background: #000000;
@@ -77,6 +74,28 @@ body{
 .orange--dot{
     color: var(--color-orange);
 }
+
+
+/* Desktop only and Mobile only classes */
+
+.only--desktop{
+    display: none !important;
+}
+
+@media screen and (min-width:800px) {
+    .only--desktop{
+        display: block !important;
+    }
+
+    .only--mobile{
+        display: none !important;
+    }
+}
+
+
+
+
+
 
 /* Grids */
 
@@ -289,6 +308,8 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background: url(../images/coolBackground.svg);
+    background-size: cover;
 }
 
 .hero__title{
@@ -354,7 +375,7 @@ background-clip: text;
 
 .section--road-board{
     overflow: hidden;
-    padding: 50px 20px 100px;
+    padding: 50px 20px 150px;
     column-gap: 10%;
     justify-items: center;
     align-items: center;
@@ -625,10 +646,6 @@ background-clip: text;
     }
 }
 
-.posts__title--mobile{
-    display: none;
-}
-
 
 @media screen and (max-width: 1100px) {
 
@@ -638,16 +655,7 @@ background-clip: text;
         align-items: center;
         overflow: hidden;
     }
-
-    .posts__title--mobile{
-        display: block;
-        font-size: 5.5rem;
-        overflow: hidden;
-    }
     
-    .posts__title{
-        display: none;
-    }
     .card img{
         transform: scale(1.2);
     }
@@ -666,17 +674,12 @@ background-clip: text;
 
 
 
-/* Orange section */
-
-
 
 
 
 /* Featured Section */
 
-.section--featured .featured-companies--mobile{
-    display: none;
-}
+
 
 .section--featured h2{
     font-size: 27vw;
@@ -688,13 +691,6 @@ background-clip: text;
 }
 
 @media screen and (max-width:800px) {
-    .featured-companies--desktop{
-        display: none;
-    }
-    .section--featured .featured-companies--mobile{
-        display: flex;
-    }
-
     .section--featured h2{
         margin-bottom: 0px;
     }
@@ -708,7 +704,7 @@ background-clip: text;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(-15deg) rotateY(15deg);
-    animation: animate 6s linear infinite;
+    animation: animate 5s linear infinite;
     margin: auto;
 }
 
@@ -1055,6 +1051,7 @@ background-clip: text;
 /* Form section */
 
 .section--form{
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1179,12 +1176,12 @@ input:-webkit-autofill{
 .footer__credits{
     margin: 0;
     font-family: var(--font-inter);
-    font-size: 1.2rem;
+    padding: 1em 0 ;
+    font-size: 1.1rem;
     text-align: center;
-    padding: 10px;
-    color: black;
-    opacity: 0.8;
-    background-color: var(--color-orange);
+    box-shadow: 0 0 1px 1px rgb(40, 40, 40);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 @media screen and (min-width:800px) {
