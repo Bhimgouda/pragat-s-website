@@ -26,6 +26,7 @@ section{
     
 }
 
+
 .hide{
     display: none;
 }
@@ -121,7 +122,7 @@ body{
     font-family: Mohave,sans-serif;
     font-style: italic;
     letter-spacing: -.3rem;
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: .7;
     padding-right: 1.6rem;
     position: relative;
@@ -275,10 +276,6 @@ body{
     .logo{
         margin: 0;
     }
-
-    .navbar{
-        padding: 0;
-     }
 
 }
 
@@ -940,9 +937,10 @@ background-clip: text;
     min-height: 180px;
     color: #000000;
     position: relative;
-    display: flex;
+    display: grid;
     margin-top: 450px;
     align-items: center;
+    grid-template-columns: repeat(2,1fr);
 }
 
 .section--about::before{
@@ -956,7 +954,6 @@ background-clip: text;
     background-repeat: no-repeat;
     background-position: top;
     background-size: 55%;
-    transform: translateX(10%);
 }
 
 .section--about h2{
@@ -964,6 +961,14 @@ background-clip: text;
     letter-spacing: -0.5vw;
     font-size: 7vw;
     padding-left: 5vw;
+}
+
+.author-img{
+    position: absolute;
+    bottom: -1px;
+    width: 30vw;
+    right: 0px;
+    z-index: 10;
 }
 
 .img-frame{
@@ -1006,25 +1011,20 @@ background-clip: text;
 }
 
 
-
-.author-img{
-    position: absolute;
-    bottom: -1px;
-    width: 30vw;
-    right: 0px;
-    z-index: 10;
-}
-
 @media screen and (max-width:800px) {
     .section--about{
         margin-top: 250px;
+        align-items: flex-end;
     }
 
     .section--about h2{
-        max-width: 50%;
         font-size: 2.5rem;
         letter-spacing: normal;
         align-self: flex-end;
+    }
+
+    .image-container{
+        position: relative;
     }
 
     .author-img{
@@ -1034,26 +1034,27 @@ background-clip: text;
     }
 
     .img-frame{
+        position: absolute;
         width: 50vw;
         height: 75vw;
     }
     
     .frame1{
-        right: 50px;
+        right: 10vw;
         bottom: -5px;
         border: 5px solid rgba(0, 51, 102,0.5);
     }
 
     .frame2{
-        right: 55px;
+        right: 10.5vw;
         bottom: -20px;
     }
     .frame3{
-        right: 60px;
+        right: 11vw;
         bottom: -30px;
     }
     .frame4{
-        right: 65px;
+        right: 11.5vw;
         bottom: -40px;
     }
 
@@ -1180,11 +1181,6 @@ input:-webkit-autofill{
         width: 40vw;
     }
 }
-
-
-* {
-    outline: 1px solid #f00 !important;
-  }
 
 
 /* Footer */

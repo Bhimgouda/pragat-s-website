@@ -17,7 +17,6 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="/" element={<Website />} />
       </Routes>
-      <Footer />
     </React.Fragment>
   );
 }
