@@ -73,6 +73,8 @@ const Website = () => {
   return (
     <React.Fragment>
       <main>
+        <Hero />
+
         <section className="section--about">
           <h2>Who am I ?</h2>
           <picture
