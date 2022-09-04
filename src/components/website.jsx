@@ -77,11 +77,7 @@ const Website = () => {
 
         <section className="section--about">
           <h2>Who am I ?</h2>
-          <picture
-            className="author-img"
-            data-aos-delay="200"
-            data-aos="fade-up-left"
-          >
+          <picture className="author-img">
             <source type="image/avif" srcSet={pragatImg} />
             <img
               src={pragatImgFallback}
