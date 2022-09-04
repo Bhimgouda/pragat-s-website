@@ -353,6 +353,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero-component .title{
@@ -1205,6 +1206,10 @@ input:-webkit-autofill{
     }
 }
 
+
+* {
+    outline: 1px solid #f00 !important;
+  }
 
 
 /* Footer */
