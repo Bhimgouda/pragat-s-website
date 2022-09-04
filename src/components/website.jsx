@@ -12,6 +12,8 @@ import web3University from "../images/web3-university.webp";
 import coinTelegraph from "../images/coino.webp";
 import pragatImg from "../images/pragat.avif";
 import pragatImgFallback from "../images/pragat.webp";
+import linkedinImg from "../images/linkedin.webp";
+import iconView from "../images/icon-view-blue.svg";
 import "aos/dist/aos.css";
 import About from "./main/about";
 import RoadBoard from "./main/road-board";
@@ -19,6 +21,7 @@ import Posts from "./main/posts";
 import FormSection from "./main/formSection";
 import LoaderComponent from "./common/loaderComponent";
 import FeaturedCompanies from "./main/featuredCompanies";
+import Socials from "./common/socials";
 
 const Website = () => {
   const [loaded, setLoading] = useState(false);
@@ -53,6 +56,21 @@ const Website = () => {
     },
   ];
 
+  const socials = [
+    {
+      label: "Linkedin",
+      name: "linkedin",
+      link: "https://www.linkedin.com/in/pragat-vyawahare-21b8271b0/",
+      img: linkedinImg,
+    },
+    {
+      name: "resume",
+      label: "Resume",
+      link: "https://drive.google.com/file/d/1v8TL8KCw8FcaWMuMEk5toCt73J2d3im2/view",
+      img: iconView,
+    },
+  ];
+
   setTimeout(() => {
     AOS.refresh();
   }, 500);
@@ -74,6 +92,7 @@ const Website = () => {
         <FeaturedCompanies featuredCompanies={featuredCompanies} />
         <Posts featuredPosts={featuredPosts} />
         <FormSection typeWriterImg={typeWriterImg} />
+        <Socials socials={socials} />
       </main>
     </React.Fragment>
   );

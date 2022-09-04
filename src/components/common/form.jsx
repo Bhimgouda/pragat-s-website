@@ -4,8 +4,9 @@ import axios from "axios";
 
 class Form extends Component {
   state = {
-    data: { name: "", email: "", subject: "", message: "" },
+    data: { name: "", email: "", message: "" },
     errors: {},
+    submitted: false,
   };
 
   schema = {
@@ -16,8 +17,15 @@ class Form extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+
+    const errors = this.validateForm();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
+    this.setState({ submitted: true });
     const { name, email, subject, message } = this.state.data;
-    this.setState({ data: { name: "", message: "", subject: "", email: "" } });
+    this.setState({
+      data: { name: "", message: "", email: "" },
+    });
     axios.defaults.headers.post["Content-Type"] = "application/json";
     const response = await axios.post(
       "https://formsubmit.co/ajax/e4a94ab3178af24c92f756f892be3382",
@@ -28,7 +36,21 @@ class Form extends Component {
         message: message,
       }
     );
+
     console.log(response);
+  };
+
+  validateForm = (input) => {
+    const options = { abortEarly: false };
+    const { error } = Joi.validate(this.state.data, this.schema);
+    const errors = {};
+    if (error) {
+      error.details.forEach((error) => {
+        errors[error.path[0]] = error.message;
+      });
+      return errors;
+    }
+    return null;
   };
 
   validateProperty = (input) => {
@@ -95,8 +117,8 @@ class Form extends Component {
         {this.renderInput("name", "Your Name", "text")}
         {this.renderInput("email", "Email", "email")}
         {this.renderTextArea("message", "Your Message")}
-        <button className=" btn btn--reflection" onClick={this.handleSubmit}>
-          Submit
+        <button className="btn btn--reflection" onClick={this.handleSubmit}>
+          {this.state.submitted === false ? "submit" : "Submitted"}
         </button>
       </form>
     );

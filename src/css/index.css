@@ -48,7 +48,7 @@ section{
     --fw-bold:700;
     
     
-    --font-inter:'Inter', sans-serif;
+    --font-inter: sans-serif;
     --font-poppins: 'Poppins', sans-serif;
     --font-mohave:'Mohave', sans-serif;
 }
@@ -67,7 +67,7 @@ ul{
 body{
     overflow-x: hidden;
     background-color: #000000;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-poppins);
     font-weight: var(--fw-light);
     font-size: var(--fs-regular);
     color: var(--color-grey-font);
@@ -151,7 +151,7 @@ body{
     padding: 0.25em 1.25em;
     margin: 10px;
     font-family: var(--font-inter);
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .btn--reflection{
@@ -231,7 +231,6 @@ body{
 .logo a{
     font-weight: 700;
     font-size: 2rem;
-    font-family: var(--font-poppins);
     color: var(--color-grey-font);
 }
 
@@ -252,6 +251,7 @@ body{
 }
 
 .nav__link a{
+    font-family: var(--font-inter);
     transition: 0.1s;
 }
 
@@ -543,7 +543,6 @@ background-clip: text;
 
 
 .section--posts{
-    font-family: var(--font-poppins);
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
 
@@ -932,6 +931,7 @@ background-clip: text;
 
 
 .section--about{
+    font-family: var(--font-inter);
     background: var(--color-orange);
     height: 21vw;
     min-height: 180px;
@@ -1087,7 +1087,6 @@ background-clip: text;
 }
 
 .input{
-    font-family: var(--font-poppins);
     width: 80vw;
     padding: 1rem;
     margin: 5px;
@@ -1098,8 +1097,8 @@ background-clip: text;
 }
 
 form .alert{
-    font-family: var(--font-poppins);
-    margin: 0.2rem;
+    width: 80vw;
+    margin: 0.2rem ;
     font-size: 1.4rem;
     color: red;
 }
@@ -1179,6 +1178,64 @@ input:-webkit-autofill{
     }
     .input{
         width: 40vw;
+    }
+}
+
+
+/* Socials */
+
+.socials-container{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social__img{
+    width: 50px;
+    transition: 0.2s;
+}
+
+.social__name{
+    position: relative;
+    bottom: 10px;
+    margin-left: 10px;
+    font-size: 3rem;
+    color: rgb(45, 45, 45);
+    transition: 0.1s;
+}
+
+
+.socials:hover .social__img{
+    transform: scale(1.4);
+}
+
+.socials:hover .linkedin{
+    color: var(--color-violet-light);
+    text-shadow: 0 0 0.5em var(--color-violet-light);
+}
+
+.socials:hover .resume{
+    color: var(--color-orange);
+    text-shadow: 0 0 0.5em var(--color-orange);
+}
+
+@media screen and (max-width:800px) {
+    .socials-container{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .social__name{
+        font-size: 2rem;
+    }
+
+    .linkedin{
+        color: var(--color-violet-light);
+    }
+    .resume{
+        bottom: 15px;
+        color: var(--color-orange);
     }
 }
 
