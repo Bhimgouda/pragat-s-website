@@ -13,10 +13,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="*" element={<Error />} />
-        <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="/" element={<Website />} />
       </Routes>
+      <Footer />
     </React.Fragment>
   );
 }
