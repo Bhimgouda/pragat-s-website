@@ -6,7 +6,7 @@
          url('../fonts/mohave-bolditalic-webfont.woff') format('woff');
     font-weight: 700;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 
@@ -17,7 +17,7 @@
          url('../fonts/poppins-lightitalic-webfont.woff') format('woff');
     font-weight: 300;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 
 /* Project Essentials */

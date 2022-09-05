@@ -1,7 +1,7 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState } from "react";
 import AOS from "aos";
 import Hero from "./main/hero";
-import typeWriterImg from "../images/typewriterImg-compressed.webp";
+import typeWriterImg from "../images/typewriterImg.webp";
 import postImg1 from "../images/683bd878731ab0e229b4f0f62e25ad58-removebg-preview.webp";
 import postImg2 from "../images/web3.jpg";
 import postImg3 from "../images/nft 3d 2.webp";
