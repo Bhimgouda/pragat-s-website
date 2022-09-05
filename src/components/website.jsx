@@ -1,11 +1,11 @@
 import React, { useState, Fragment, useEffect } from "react";
 import AOS from "aos";
 import Hero from "./main/hero";
-import typeWriterImg from "../images/typewriterImg.webp";
+import typeWriterImg from "../images/typewriterImg-compressed.webp";
 import postImg1 from "../images/683bd878731ab0e229b4f0f62e25ad58-removebg-preview.webp";
-import postImg2 from "../images/web3.webp";
+import postImg2 from "../images/web3.jpg";
 import postImg3 from "../images/nft 3d 2.webp";
-import postImg4 from "../images/photo-1651055705032-d4187855b004.webp";
+import postImg4 from "../images/usdt-img.jpg";
 import hackernoon from "../images/HackerNoon-Logo.webp";
 import rateCity from "../images/rateCity.svg";
 import web3University from "../images/web3-university.webp";
