@@ -1,5 +1,25 @@
 @import url(normalize.css);
 
+@font-face {
+    font-family: 'Mohave';
+    src: url('../fonts/mohave-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/mohave-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
 /* Project Essentials */
 
 html{
@@ -119,7 +139,9 @@ body{
 .title{
     text-transform: uppercase;
     display: block;
-    font-family: Mohave,sans-serif;
+    font-variation-settings: 'wght' 700;
+    font-weight: 700;
+    font-family: var(--font-mohave);
     font-style: italic;
     letter-spacing: -.3rem;
     font-size: 4rem;
@@ -128,7 +150,6 @@ body{
     position: relative;
     margin: 6px 0;
     padding-top: 1.6rem;
-    font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
     text-align: center;
