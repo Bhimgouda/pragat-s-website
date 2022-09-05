@@ -88,7 +88,9 @@ class Form extends Component {
           placeholder={label}
           autoComplete={autocomplete}
         />
-        {errors[name] && <div className="alert">{errors[name]}</div>}
+        {(errors[name] && <div className="alert">{errors[name]}</div>) || (
+          <div className="alert">{errors[name]}</div>
+        )}
       </div>
     );
   };
@@ -106,7 +108,9 @@ class Form extends Component {
           cols="30"
           rows="10"
         />
-        {errors[name] && <div className="alert">{errors[name]}</div>}
+        {(errors[name] && <div className="alert">{errors[name]}</div>) || (
+          <div className="alert">{errors[name]}</div>
+        )}
       </div>
     );
   };
