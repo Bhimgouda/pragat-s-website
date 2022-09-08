@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Joi, { errors } from "joi-browser";
+import Joi from "joi-browser";
 import axios from "axios";
+
+console.log(Joi);
 
 class Form extends Component {
   state = {
