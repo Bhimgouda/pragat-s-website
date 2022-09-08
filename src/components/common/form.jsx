@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Joi from "joi-browser";
 import axios from "axios";
 
-console.log(Joi);
-
 class Form extends Component {
   state = {
     data: { name: "", email: "", message: "" },
